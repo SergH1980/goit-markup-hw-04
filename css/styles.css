@@ -142,30 +142,51 @@ img {
 }
 
 .contact-link:hover,
-.contact-link:focus {
+.contact-link:focus,
+.icon-envelope:hover,
+.icon-phone:hover {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
-.icon-envelope::before {
-  content: "";
-  height: 12px;
+.mail {
+  display: inline-flex;
+  align-items: center;
+}
+
+.link-envelope {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: none;
+}
+
+.icon-envelope {
   width: 16px;
-  display: inline-block;
-  background-image: url(../images/envelope.svg);
+  height: 12px;
   margin-right: 10px;
-  background-repeat: no-repeat;
-  background-position: center;
+  fill: #757575;
 }
 
-.icon-phone::before {
-  content: "";
-  height: 16px;
+.phone {
+  display: inline-flex;
+  align-items: center;
+}
+
+.link-phone {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: none;
+}
+
+.icon-phone {
   width: 10px;
-  display: inline-block;
-  background-image: url(../images/smartphone.svg);
+  height: 16px;
   margin-right: 10px;
-  background-repeat: no-repeat;
-  background-position: center;
+  fill: #757575;
 }
 
 /* Основний */
@@ -259,33 +280,6 @@ img {
 
 .feature-list .item {
   width: calc((100% - 90px) / 4);
-}
-
-.feature-list .item:before {
-  content: "";
-  display: block;
-  height: 120px;
-  background-color: var(--third-bg-color);
-  margin-bottom: 30px;
-  background-size: initial;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.icon-antenna::before {
-  background-image: url(../images/antenna-1.svg);
-}
-
-.icon-clock::before {
-  background-image: url(../images/clock-1.svg);
-}
-
-.icon-diagram::before {
-  background-image: url(../images/diagram-1.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/astronaut-1.svg);
 }
 
 .feature-list-title {
