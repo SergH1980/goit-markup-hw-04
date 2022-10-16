@@ -64,6 +64,8 @@ img {
   letter-spacing: 0.02em;
 }
 
+/* Хедер */
+
 /* Верхній логотип */
 
 .header {
@@ -132,15 +134,38 @@ img {
 }
 
 .contact-link {
+  display: inline-flex;
   color: var(--primary-text-color);
-  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 }
 
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
+}
+
+.icon-envelope::before {
+  content: "";
+  height: 12px;
+  width: 16px;
+  display: inline-block;
+  background-image: url(../images/envelope.svg);
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-phone::before {
+  content: "";
+  height: 16px;
+  width: 10px;
+  display: inline-block;
+  background-image: url(../images/smartphone.svg);
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Основний */
@@ -153,7 +178,22 @@ img {
 /* Гергой */
 
 .hero {
-  background-color: var(--secondary-bg-color);
+  width: 1600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: #c4c4c4;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-background-image.jpg);
+
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -219,6 +259,33 @@ img {
 
 .feature-list .item {
   width: calc((100% - 90px) / 4);
+}
+
+.feature-list .item:before {
+  content: "";
+  display: block;
+  height: 120px;
+  background-color: var(--third-bg-color);
+  margin-bottom: 30px;
+  background-size: initial;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/antenna-1.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock-1.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram-1.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut-1.svg);
 }
 
 .feature-list-title {
@@ -295,6 +362,53 @@ img {
 .team-list-text {
   font-size: 16px;
   line-height: 1.19;
+}
+
+/* Постійні клієнти */
+
+.client-list {
+  display: flex;
+  gap: 30px;
+}
+
+.client-list .item {
+  justify-content: center;
+  min-width: calc((100% - 150px) / 6);
+}
+
+.client-list .item::before {
+  content: "";
+  display: block;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: center;
+}
+
+.client1::before {
+  background-image: url(../images/Client1.svg);
+}
+
+.client2::before {
+  background-image: url(../images/Client2.svg);
+}
+.client3::before {
+  background-image: url(../images/Client3.svg);
+}
+.client4::before {
+  background-image: url(../images/Client4.svg);
+}
+.client5::before {
+  background-image: url(../images/Client5.svg);
+}
+.client6::before {
+  background-image: url(../images/Client6.svg);
+}
+
+.client-list .item {
+  cursor: pointer;
 }
 
 /* Футер */
@@ -386,10 +500,6 @@ img {
   > .portfolio-button-text {
   padding: 6px 25px;
 }
-
-/* .portfolio-button-text.small-padding {
-  padding: 6px 25px;
-} */
 
 .portfolio-button-list button:hover,
 .portfolio-button-list button:focus {
