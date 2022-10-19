@@ -5,7 +5,7 @@
   --primary-bg-color: #ffffff;
   --secondary-bg-color: #2f303a;
   --third-bg-color: #f5f4fa;
-  --icon-color: #afb1b8;
+  --icon-social-color: #afb1b8;
 }
 
 /* Загальні елементи */
@@ -358,7 +358,11 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  fill: var(--icon-color);
+  color: var(--icon-social-color);
+}
+
+.team-social-icon {
+  fill: currentColor;
 }
 
 .team-social-link:hover,
@@ -391,10 +395,11 @@ img {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  color: var(--icon-social-color);
 }
 
 .client-icon {
-  fill: var(--icon-color);
+  fill: currentColor;
 }
 
 .client-item-link:focus,
@@ -499,6 +504,11 @@ img {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  color: var(--primary-bg-color);
+}
+
+.footer-social-icon {
+  fill: currentColor;
 }
 
 .footer-social-link:hover,
@@ -566,11 +576,13 @@ img {
   gap: 30px;
 }
 
-.portfolio-sample-box {
+.portfolio-sample-link {
   width: calc ((100% - 60px) / 3);
+  display: inline-block;
 }
 
-.portfolio-sample-box:hover {
+.portfolio-sample-link:hover,
+.portfolio-sample-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -593,4 +605,5 @@ img {
 .portfolio-sample-list-text {
   font-size: 16px;
   line-height: 1.88;
+  color: var(--primary-text-color);
 }
