@@ -170,7 +170,7 @@ img {
 /* Гергой */
 
 .hero {
-  max-width: 1600px;
+  width: 1600px;
   height: 600px;
   background-repeat: no-repeat;
   background-position: center;
@@ -316,13 +316,10 @@ img {
 }
 
 .team-wrap {
-  display: block;
   text-align: center;
 
   padding-top: 30px;
-  padding-left: auto;
-  padding-right: auto;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .team-list-title {
@@ -368,11 +365,7 @@ img {
 .team-social-link:hover,
 .team-social-link:focus {
   background-color: var(--accent-color);
-}
-
-.team-social-link:hover .team-social-icon,
-.team-social-link:focus .team-social-icon {
-  fill: var(--primary-bg-color);
+  color: var(--primary-bg-color);
 }
 
 /* Постійні клієнти */
@@ -405,11 +398,7 @@ img {
 .client-item-link:focus,
 .client-item-link:hover {
   border-color: var(--accent-color);
-}
-
-.client-item-link:hover .client-icon,
-.client-item-link:focus .client-icon {
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* Футер */
@@ -514,12 +503,9 @@ img {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background: var(--accent-color);
+  color: var(--primary-bg-color);
 }
 
-.footer-social-link:hover .footer-social-icon,
-.footer-social-link:focus .footer-social-icon {
-  fill: var(--primary-bg-color);
-}
 /* Портфоліо */
 
 /* Кнопки */
@@ -576,9 +562,13 @@ img {
   gap: 30px;
 }
 
+.portfoliol-sample-item {
+  width: calc((100% - 60px) / 3);
+}
+
 .portfolio-sample-link {
-  width: calc ((100% - 60px) / 3);
   display: inline-block;
+  text-decoration: none;
 }
 
 .portfolio-sample-link:hover,
@@ -606,4 +596,5 @@ img {
   font-size: 16px;
   line-height: 1.88;
   color: var(--primary-text-color);
+  font-weight: 400;
 }
